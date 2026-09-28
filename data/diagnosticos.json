@@ -1,0 +1,19 @@
+{
+  "teste-123": {
+    "leadId": "teste-123",
+    "empresa": "Indústrias Acme Ltda",
+    "contatoNome": "Eng. Roberto",
+    "contatoTel": "",
+    "contatoEmail": "",
+    "respostas": {
+      "focoOperacao": "oem",
+      "frequenciaCompra": "semanal",
+      "desafioFornecedor": "prazo",
+      "desejoAmostra": "sim_amostra"
+    },
+    "respondido": true,
+    "respondidoEm": "2026-09-15T14:06:45.994Z",
+    "respondidoPor": "cliente",
+    "sincronizadoNoCrm": true
+  }
+}

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Válvula de Sopro PET | MiCRO Automação - Proposta Exclusiva {{empresa}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --micro-blue: #0057a8;
+            --micro-blue-dark: #003d75;
+            --micro-orange: #f26522;
+            --micro-orange-light: #ff7a33;
+            --micro-black: #1a1a1a;
+            --micro-dark: #2d2d2d;
+            --micro-gray: #6b6b6b;
+            --micro-light: #f5f5f5;
+            --micro-white: #ffffff;
+            --success: #28a745;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--micro-dark);
+            overflow-x: hidden;
+            background: #fff;
+        }
+        h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .navbar {
+            background: var(--micro-white);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--micro-orange);
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-micro {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-blue {
+            background: var(--micro-blue);
+            color: white;
+            padding: 8px 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.6em;
+            letter-spacing: 2px;
+            border-radius: 4px;
+        }
+        .logo-blue span {
+            font-weight: 400;
+            font-size: 0.5em;
+            display: block;
+            letter-spacing: 3px;
+            text-transform: lowercase;
+        }
+        .nav-cta {
+            background: var(--micro-orange);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-cta:hover {
+            background: var(--micro-orange-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(242, 101, 34, 0.4);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--micro-black) 0%, var(--micro-dark) 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 87, 168, 0.35) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(242, 101, 34, 0.25) 0%, transparent 50%);
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text .badge-exclusive {
+            display: inline-block;
+            background: var(--micro-orange);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 4px 12px rgba(242, 101, 34, 0.3);
+        }
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .hero h1 .highlight-orange { color: var(--micro-orange); display: block; }
+        .hero h1 .highlight-blue {
+            color: var(--micro-blue);
+            background: white;
+            padding: 4px 16px;
+            display: inline-block;
+            border-radius: 4px;
+            font-size: 0.7em;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            margin-top: 6px;
+        }
+        .hero .subtitle {
+            font-size: 1.25em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        .hero-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+        .hero-benefit {
+            background: rgba(255,255,255,0.12);
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            border-left: 3px solid var(--micro-orange);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        .hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        .cta-button {
+            display: inline-block;
+            background: var(--micro-orange);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95em;
+            transition: all 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(242, 101, 34, 0.45);
+            background: var(--micro-orange-light);
+        }
+        .cta-button.blue { background: var(--micro-blue); }
+        .cta-button.blue:hover {
+            background: var(--micro-blue-dark);
+            box-shadow: 0 6px 25px rgba(0, 87, 168, 0.45);
+        }
+        .cta-button.outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+        .cta-button.outline:hover {
+            background: white;
+            color: var(--micro-black);
+        }
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .valve-card-showcase {
+            width: 100%;
+            background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+        .valve-svg-wrap {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 15px;
+        }
+        .badge-nacional {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background: var(--micro-orange);
+            color: white;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 5px 20px rgba(242, 101, 34, 0.5);
+            animation: pulse 2s infinite;
+            text-align: center;
+            line-height: 1.2;
+            z-index: 2;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+        .badge-nacional span { font-size: 1.35em; }
+        
+        .social-proof {
+            background: var(--micro-blue);
+            color: white;
+            padding: 36px 0;
+        }
+        .social-proof-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        .proof-item { text-align: center; }
+        .proof-number {
+            font-size: 2.8em;
+            font-weight: 900;
+            color: var(--micro-orange);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1;
+        }
+        .proof-label {
+            font-size: 0.85em;
+            opacity: 0.95;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .problem { padding: 80px 0; background: var(--micro-light); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header .tag {
+            display: inline-block;
+            background: var(--micro-orange);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .section-header h2 {
+            font-size: 2.4em;
+            color: var(--micro-black);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.15em;
+            color: var(--micro-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .problem-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--micro-orange);
+            transition: transform 0.3s;
+        }
+        .problem-card:hover { transform: translateY(-6px); }
+        .problem-card .icon { font-size: 2.5em; margin-bottom: 15px; }
+        .problem-card h3 {
+            color: var(--micro-black);
+            margin-bottom: 10px;
+            font-size: 1.25em;
+            text-transform: uppercase;
+        }
+        
+        .solution { padding: 80px 0; background: white; }
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .solution-text h2 {
+            font-size: 2.3em;
+            color: var(--micro-black);
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .solution-text h2 span { color: var(--micro-orange); }
+        .solution-text .lead {
+            font-size: 1.1em;
+            color: var(--micro-gray);
+            margin-bottom: 25px;
+        }
+        .feature-list { list-style: none; }
+        .feature-list li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.05em;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list .check {
+            background: var(--micro-blue);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .compatibility {
+            padding: 80px 0;
+            background: var(--micro-black);
+            color: white;
+        }
+        .compatibility-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .compatibility-box {
+            background: rgba(255,255,255,0.05);
+            border: 2px solid var(--micro-orange);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+        }
+        .compatibility-text h3 {
+            font-size: 2.1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .compatibility-text h3 span { color: var(--micro-orange); }
+        .compatibility-text p {
+            font-size: 1.1em;
+            margin-bottom: 18px;
+            opacity: 0.92;
+            line-height: 1.7;
+        }
+        .norgren-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 5px 6px 5px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+        .norgren-badge .dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; }
+        
+        .advantages { padding: 80px 0; background: var(--micro-light); }
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .advantage-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+        .advantage-card:hover {
+            transform: translateY(-6px);
+            border-bottom-color: var(--micro-orange);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        .advantage-icon { font-size: 2.8em; margin-bottom: 15px; }
+        .advantage-card h3 {
+            color: var(--micro-black);
+            margin-bottom: 12px;
+            font-size: 1.25em;
+            text-transform: uppercase;
+        }
+        .advantage-card p { color: var(--micro-gray); line-height: 1.65; }
+        .advantage-tag {
+            display: inline-block;
+            background: var(--micro-blue);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.78em;
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .price-card {
+            background: linear-gradient(135deg, var(--micro-orange), var(--micro-orange-light));
+            color: white;
+        }
+        .price-card h3 { color: white; }
+        .price-card p { color: rgba(255,255,255,0.95); }
+        .price-tag {
+            display: inline-block;
+            background: white;
+            color: var(--micro-orange);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.9em;
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* SEÇÃO ITENS / PROPOSTA PERSONALIZADA (JIT) */
+        .proposta-itens-section {
+            padding: 70px 0;
+            background: #fff;
+            border-top: 1px solid #eaeaea;
+        }
+        .proposta-box {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .itens-tabela-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        .itens-tabela-custom th {
+            background: var(--micro-blue);
+            color: white;
+            text-align: left;
+            padding: 12px 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .itens-tabela-custom td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e5e5;
+            color: #333;
+        }
+        .itens-tabela-custom tr:nth-child(even) { background: #fdfdfd; }
+        
+        .personal-message {
+            background: var(--micro-light);
+            padding: 60px 0;
+            border-top: 4px solid var(--micro-orange);
+            border-bottom: 4px solid var(--micro-orange);
+        }
+        .personal-message .container { max-width: 850px; }
+        .message-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--micro-blue);
+        }
+        .message-box h3 {
+            color: var(--micro-black);
+            font-size: 1.45em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .message-box p {
+            font-size: 1.08em;
+            color: var(--micro-gray);
+            line-height: 1.75;
+            margin-bottom: 15px;
+        }
+        .message-box .signature {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .message-box .signature strong { color: var(--micro-blue); font-size: 1.15em; }
+        .message-box .signature .role { color: var(--micro-gray); font-size: 0.9em; line-height: 1.5; display: block; }
+        
+        .cta-final {
+            padding: 90px 0;
+            background: linear-gradient(135deg, var(--micro-blue) 0%, var(--micro-blue-dark) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .cta-final h2 {
+            font-size: 2.6em;
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .cta-final h2 span { color: var(--micro-orange); }
+        .cta-final .subtitle {
+            font-size: 1.25em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .urgency-box {
+            background: var(--micro-orange);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 15px 0 25px;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-buttons-final {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .guarantee {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            opacity: 0.9;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        .guarantee-item .check { color: var(--micro-orange); font-size: 1.2em; font-weight: bold; }
+        
+        footer {
+            background: var(--micro-black);
+            color: white;
+            padding: 50px 0 25px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 35px;
+        }
+        .footer-brand .logo-blue { display: inline-block; margin-bottom: 15px; }
+        .footer-brand p { opacity: 0.8; font-size: 0.92em; line-height: 1.7; }
+        .footer-links h4 {
+            margin-bottom: 15px;
+            color: var(--micro-orange);
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95em;
+            letter-spacing: 1px;
+        }
+        .footer-links ul { list-style: none; }
+        .footer-links li { padding: 6px 0; }
+        .footer-links a { color: white; text-decoration: none; opacity: 0.8; font-size: 0.9em; transition: opacity 0.2s; }
+        .footer-links a:hover { opacity: 1; color: var(--micro-orange); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.82em;
+        }
+        
+        @media (max-width: 868px) {
+            .hero-content, .solution-content, .compatibility-content, .footer-content { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2em; }
+            .hero { padding: 110px 0 60px; }
+            .badge-nacional { width: 75px; height: 75px; font-size: 0.6em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-micro">
+                <div class="logo-blue">
+                    MiCRO
+                    <span>automação</span>
+                </div>
+            </div>
+            <a href="#proposta" class="nav-cta">Solicitar Proposta</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge-exclusive">🎯 Proposta Exclusiva para {{empresa}}</span>
+                    <h1>
+                        NOVA VÁLVULA DE
+                        <span class="highlight-orange">SOPRO PET</span>
+                        <span class="highlight-blue">Produto Nacional</span>
+                    </h1>
+                    <p class="subtitle">
+                        Manutenção simples e de <strong>baixo custo</strong> dos reparos. 
+                        Tecnologia validada com foco em praticidade, custo e tempo de manutenção.
+                    </p>
+                    <div class="hero-benefits">
+                        <span class="hero-benefit">✓ Fácil Instalação</span>
+                        <span class="hero-benefit">✓ Alta Vazão</span>
+                        <span class="hero-benefit">✓ 1W Consumo</span>
+                        <span class="hero-benefit">✓ Preço Imbatível</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#proposta" class="cta-button">QUERO UMA PROPOSTA</a>
+                        <a href="https://wa.me/{{vendedor_whatsapp_digits}}?text=Ol%C3%A1%20{{vendedor_nome}},%20sou%20da%20{{empresa}}%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20v%C3%A1lvulas%20de%20sopro%20PET." class="cta-button outline" target="_blank">FALAR COM {{vendedor_nome}}</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="valve-card-showcase">
+                        <div class="valve-svg-wrap">
+                            <img
+                                src="https://raw.githubusercontent.com/fernandomicroautomacao-ui/white_Label_CRM/main/assets/valvuladesopropet2.webp"
+                                alt="Nova válvula de sopro PET MiCRO automação em uma linha de produção de garrafas PET"
+                                width="1638"
+                                height="2048"
+                                loading="eager"
+                                style="display:block;width:100%;height:auto;border-radius:8px;filter:drop-shadow(0 15px 25px rgba(0,0,0,0.5));"
+                            >
+                        </div>
+                        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05em;color:#fff;">Válvula de Sopro PET MiCRO</div>
+                        <div style="font-size:0.85em;color:#cbd5e0;margin-top:4px;">Alta vazão • Baixo consumo 1W • Compatibilidade Norgren</div>
+                    </div>
+                    <div class="badge-nacional">
+                        <span>PRODUTO</span>
+                        NACIONAL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF BAR -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <div class="proof-item">
+                    <div class="proof-number">60%</div>
+                    <div class="proof-label">Menos Manutenção</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">+50</div>
+                    <div class="proof-label">Plantas Equipadas</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">24h</div>
+                    <div class="proof-label">Peças de Reposição</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">100%</div>
+                    <div class="proof-label">Compatível Norgren</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Diagnóstico</span>
+                <h2>Sua operação enfrenta esses desafios?</h2>
+                <p>Se você usa válvulas de sopro convencionais, provavelmente já lidou com:</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon">⏱️</div>
+                    <h3>Tempo de Parada Elevado</h3>
+                    <p>Manutenções complexas que param sua produção por horas, gerando prejuízo e atrasos na entrega.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">💸</div>
+                    <h3>Custo de Reposição Alto</h3>
+                    <p>Peças importadas com preços elevados e lead time longo, impactando seu orçamento operacional.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Complexidade na Troca</h3>
+                    <p>Instalações complicadas que exigem mão de obra especializada e tempo precioso da equipe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>A Solução Definitiva para <span>Sua Linha PET</span></h2>
+                    <p class="lead">
+                        Nossa válvula de sopro PET foi desenvolvida com foco em <strong>praticidade, custo e tempo de manutenção</strong>. 
+                        Tecnologia validada em diversas plantas industriais, funcionando em conjunto com Norgren.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Fácil Instalação</strong> - Plug and play, sem complicações</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Construção Robusta</strong> - Durabilidade comprovada em campo</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Alta Capacidade de Vazão</strong> - Performance superior</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Alta Eficiência e Repetibilidade</strong> - Qualidade constante</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Excelente Tempo de Resposta</strong> - Precisão em cada ciclo</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Sistema por Despressurização</strong> - Tecnologia avançada</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Baixo Consumo (1W)</strong> - Economia de energia contínua</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="background:#f8f9fa;border:1px solid #e2e8f0;border-radius:12px;padding:35px;box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+                        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.4em;color:var(--micro-blue);margin-bottom:15px;text-transform:uppercase;">
+                            Destaques Técnicos MiCRO
+                        </div>
+                        <p style="color:var(--micro-gray);margin-bottom:20px;">
+                            Projetada para suportar a cadência agressiva das sopradoras industriais rotativas e lineares mais exigentes do Brasil.
+                        </p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
+                            <div style="background:#fff;padding:15px;border-radius:6px;border-left:4px solid var(--micro-blue);">
+                                <div style="font-size:0.8em;color:#888;text-transform:uppercase;font-weight:700;">Pressão de Trabalho</div>
+                                <strong style="color:var(--micro-dark);font-size:1.1em;">Até 40 Bar</strong>
+                            </div>
+                            <div style="background:#fff;padding:15px;border-radius:6px;border-left:4px solid var(--micro-orange);">
+                                <div style="font-size:0.8em;color:#888;text-transform:uppercase;font-weight:700;">Consumo Elétrico</div>
+                                <strong style="color:var(--micro-dark);font-size:1.1em;">Apenas 1W</strong>
+                            </div>
+                            <div style="background:#fff;padding:15px;border-radius:6px;border-left:4px solid var(--success);">
+                                <div style="font-size:0.8em;color:#888;text-transform:uppercase;font-weight:700;">Manutenção</div>
+                                <strong style="color:var(--micro-dark);font-size:1.1em;">Reparo Fácil</strong>
+                            </div>
+                            <div style="background:#fff;padding:15px;border-radius:6px;border-left:4px solid var(--micro-blue);">
+                                <div style="font-size:0.8em;color:#888;text-transform:uppercase;font-weight:700;">Garantia & Suporte</div>
+                                <strong style="color:var(--micro-dark);font-size:1.1em;">Nacional Direto</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPATIBILITY SECTION -->
+    <section class="compatibility">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag" style="background: var(--micro-blue);">Compatibilidade</span>
+                <h2 style="color:#fff;">Funciona com Seu Parque Atual</h2>
+                <p style="color:rgba(255,255,255,0.85);">Instalada e operando em conjunto com sistemas Norgren em diversas plantas</p>
+            </div>
+            <div class="compatibility-content">
+                <div class="compatibility-box">
+                    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.8em;color:var(--micro-orange);margin-bottom:12px;">
+                        100% PLUG & PLAY
+                    </div>
+                    <p style="opacity:0.9;font-size:1.05em;margin-bottom:20px;">
+                        Substituição direta sem necessidade de adaptações estruturais ou alterações mecânicas no bloco de sopro.
+                    </p>
+                    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+                        <span class="norgren-badge"><span class="dot"></span> Compatível Norgren</span>
+                        <span class="norgren-badge"><span class="dot"></span> Plug & Play</span>
+                        <span class="norgren-badge"><span class="dot"></span> Sem Adaptações</span>
+                    </div>
+                </div>
+                <div class="compatibility-text">
+                    <h3>{{decisor}}, <span>Já Estamos na Sua Planta!</span></h3>
+                    <p>
+                        Acreditamos que a <strong>{{empresa}}</strong> já possui ou tem total afinidade com a tecnologia das nossas válvulas em operação, 
+                        inclusive funcionando em conjunto com sistemas <strong>Norgren</strong>.
+                    </p>
+                    <p>
+                        Que tal expandir essa tecnologia para toda a sua linha de produção e 
+                        colher os benefícios em escala? Preço realmente imbatível pelo que entregamos.
+                    </p>
+                    <a href="#proposta" class="cta-button" style="margin-top: 15px;">
+                        EXPANDIR PARA TODA LINHA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES SECTION -->
+    <section class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Diferenciais</span>
+                <h2>Vantagens Competitivas Reais</h2>
+                <p>Não é só discurso. São resultados que impactam seu bottom line:</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card price-card">
+                    <div class="advantage-icon">🤑</div>
+                    <h3>Preço Imbatível</h3>
+                    <p>O melhor custo-benefício do mercado. Economia comprovada desde o primeiro mês. Realmente imbatível pelo que entregamos!</p>
+                    <span class="price-tag">💰 ECONOMIA REAL</span>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🚀</div>
+                    <h3>Peças de Reposição Rápidas</h3>
+                    <p>Velocidade em peças de reposição. Estoque local e entrega ágil. Sua produção nunca mais vai parar.</p>
+                    <span class="advantage-tag">⚡ ENTREGA RÁPIDA</span>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🔧</div>
+                    <h3>Manutenção Simplificada</h3>
+                    <p>Foco na praticidade. Design inteligente que facilita a vida do seu time de manutenção.</p>
+                    <span class="advantage-tag">✓ FÁCIL TROCA</span>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">📊</div>
+                    <h3>Mais Produtividade</h3>
+                    <p>Menos tempo de manutenção = mais horas de produção = mais lucro para a {{empresa}}.</p>
+                    <span class="advantage-tag">📈 +PRODUTIVIDADE</span>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🇧🇷</div>
+                    <h3>Produto Nacional</h3>
+                    <p>Sem dependência de importação. Suporte técnico local e atendimento personalizado.</p>
+                    <span class="advantage-tag">🇧🇷 MADE IN BRAZIL</span>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">✅</div>
+                    <h3>Validada em Campo</h3>
+                    <p>Válvulas já testadas e aprovadas em diversas plantas, com performance superior comprovada.</p>
+                    <span class="advantage-tag">✓ VALIDADA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PERSONALIZADA: ITENS DA PROPOSTA / OPORTUNIDADE (RENDERIZADA JUST-IN-TIME) -->
+    <section class="proposta-itens-section">
+        <div class="container">
+            <div class="proposta-box">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;margin-bottom:15px;">
+                    <div>
+                        <span style="font-size:0.8em;font-weight:700;color:var(--micro-orange);text-transform:uppercase;letter-spacing:1px;">Resumo Comercial</span>
+                        <h3 style="font-size:1.6em;color:var(--micro-black);text-transform:uppercase;margin:4px 0 0;">Proposta Comercial para {{empresa}}</h3>
+                    </div>
+                    <div style="text-align:right;">
+                        <div style="font-size:0.85em;color:var(--micro-gray);">Oportunidade / Pedido: <strong>{{numero_pedido}}</strong></div>
+                        <div style="font-size:1.4em;font-weight:900;color:var(--micro-blue);font-family:'Montserrat',sans-serif;">{{valor}}</div>
+                    </div>
+                </div>
+                {{itens_tabela}}
+            </div>
+        </div>
+    </section>
+
+    <!-- PERSONAL MESSAGE -->
+    <section class="personal-message">
+        <div class="container">
+            <div class="message-box">
+                <h3>👋 {{decisor}}, uma mensagem direta para você:</h3>
+                <p>
+                    Acreditamos que a <strong>{{empresa}}</strong> busca sempre elevar a eficiência da sua linha reduzindo custos operacionais. 
+                    Gostaríamos de entender se faz sentido para vocês usufruírem das nossas vantagens competitivas 
+                    de forma <strong>exclusiva</strong>.
+                </p>
+                <p>
+                    Nosso atrativo é a <strong>facilidade</strong>, e nosso preço é realmente 💰 <strong>IMBATÍVEL</strong> 💰 pelo que estamos entregando! 
+                    Contamos com velocidade em peças de reposição e uma série de melhorias focadas em praticidade, 
+                    custo e tempo de manutenção.
+                </p>
+                <p>
+                    Como estão as suas válvulas atuais? Vamos conversar sobre como podemos ajudar a {{empresa}} 
+                    a reduzir custos e aumentar a produtividade.
+                </p>
+                <div class="signature">
+                    <strong>{{vendedor_nome}}</strong><br>
+                    <span class="role">MiCRO Automação | Válvulas de Sopro PET</span>
+                    <span class="role">📱 {{vendedor_telefone}} | ✉️ {{vendedor_email}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL SECTION -->
+    <section class="cta-final" id="proposta">
+        <div class="container">
+            <h2>{{decisor}}, <span>Faz Sentido para a {{empresa}}?</span></h2>
+            <p class="subtitle">
+                Descubra quanto você pode economizar migrando para nossas válvulas de sopro PET
+            </p>
+            
+            <div class="urgency-box">
+                ⏰ PROPOSTA EM CARÁTER EXCLUSIVO
+            </div>
+            
+            <div class="cta-buttons-final">
+                <a href="mailto:{{vendedor_email}}?subject=Proposta%20Exclusiva%20{{empresa}}%20-%20V%C3%A1lvulas%20PET%20MiCRO&body=Ol%C3%A1%20{{vendedor_nome}},%20gostaria%20de%20receber%20a%20proposta%20exclusiva%20para%20a%20{{empresa}}." class="cta-button" style="padding:18px 36px;font-size:1.05em;">
+                    ✉️ SOLICITAR PROPOSTA COMERCIAL
+                </a>
+                <a href="https://wa.me/{{vendedor_whatsapp_digits}}?text=Ol%C3%A1%20{{vendedor_nome}},%20sou%20da%20{{empresa}}%20e%20gostaria%20de%20conversar%20sobre%20a%20proposta%20de%20v%C3%A1lvulas%20PET." class="cta-button outline" style="padding:18px 36px;font-size:1.05em;" target="_blank">
+                    📱 WHATSAPP {{vendedor_nome}}
+                </a>
+            </div>
+            
+            <div class="guarantee">
+                <div class="guarantee-item">
+                    <span class="check">✓</span>
+                    <span>Resposta em até 24h</span>
+                </div>
+                <div class="guarantee-item">
+                    <span class="check">✓</span>
+                    <span>Proposta personalizada</span>
+                </div>
+                <div class="guarantee-item">
+                    <span class="check">✓</span>
+                    <span>Sem compromisso</span>
+                </div>
+                <div class="guarantee-item">
+                    <span class="check">✓</span>
+                    <span>Diagnóstico gratuito</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-blue">
+                        MiCRO
+                        <span>automação</span>
+                    </div>
+                    <p>
+                        Soluções em válvulas de sopro PET com tecnologia nacional, 
+                        preço imbatível e suporte local. Sua produção nunca mais para.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato Comercial</h4>
+                    <div style="font-size:0.95em;margin-bottom:8px;"><strong>{{vendedor_nome}}</strong></div>
+                    <div style="font-size:0.9em;opacity:0.9;margin-bottom:6px;">📱 {{vendedor_telefone}}</div>
+                    <div style="font-size:0.9em;opacity:0.9;margin-bottom:6px;">✉️ {{vendedor_email}}</div>
+                    <div style="font-size:0.9em;opacity:0.9;">🌐 www.microautomacao.com.br</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#proposta">Solicitar Proposta</a></li>
+                        <li><a href="https://wa.me/{{vendedor_whatsapp_digits}}" target="_blank">WhatsApp Direto</a></li>
+                        <li><a href="https://www.microautomacao.com.br" target="_blank">Site MiCRO</a></li>
+                        <li><a href="mailto:{{vendedor_email}}">E-mail Comercial</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© {{ano_atual}} MiCRO Automação - Todos os direitos reservados | Proposta Exclusiva {{empresa}} | CNPJ: {{cnpj}}</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
